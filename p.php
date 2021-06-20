@@ -8,7 +8,7 @@ echo "Save to; ";
 $b = trim(fgets(STDIN));
 asu();
 ban($a);
-system("curl http://api.hackertarget.com/hostsearch/?q=".str_replace('http://','',str_replace('https://','',str_replace('www.','',strtolower($a))))." -o $b");
+system("curl http://api.hackertarget.com/hostsearch/?q=".str_replace('/','',str_replace('http://','',str_replace('https://','',str_replace('www.','',strtolower($a)))))." -o $b");
 asu();
 ban($a);
 $del = file_get_contents("$b");
